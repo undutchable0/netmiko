@@ -15,7 +15,7 @@ config_command = [
     'descrip Change loop'
     ]
 
-for loop in range(10,15,1):
+for loop in range(99,98,97):
     loop_commands = ['int loop ' + str(loop), 'description Looper ' + str(loop)]
     sshCli.send_config_set(loop_commands)
 
