@@ -15,7 +15,7 @@ if password:
 
 tn.write(b"enable\n")
 tn.write(b"conf t\n")
-tn.write(b"int 102\n")
+tn.write(b"int 1o105\n")
 tn.write(b"description HellYah\n")
 tn.write(b"end\n")
 tn.write(b"exit\n")
