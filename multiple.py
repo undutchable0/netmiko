@@ -10,8 +10,7 @@ f = open ('hosts.txt')
 for IP in f:
   IP=IP.strip()
   print ("Configuring Switch " + (IP))
-  HOST = IP
-  tn = telnetlib.Telnet(HOST)
+  tn = telnetlib.Telnet(IP)
   tn.read_until(b"Username: ")
   tn.write(user.encode('ascii') + b"\n")
   if password:
