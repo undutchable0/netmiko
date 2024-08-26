@@ -16,7 +16,7 @@ if password:
 tn.write(b"enable\n")
 tn.write(b"conf t\n")
 for loop in range(5,10,1):
-    tn.write(b"int (loop)\n")
+    tn.write(b"int loo" + str(loop).encode('ascii') + b"\n")
     tn.write(b"exit\n")
 tn.write(b"int loo 200\n")
 tn.write(b"description HellYah\n")
