@@ -15,7 +15,7 @@ config_command = [
     'descrip HPDM'
     ]
 
-for loop in range(99,98,97):
+for loop in range(55,60,1):
     loop_commands = ['int loop ' + str(loop), 'description HPDM ' + str(loop)]
     sshCli.send_config_set(loop_commands)
 
