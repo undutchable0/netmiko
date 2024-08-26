@@ -16,7 +16,7 @@ config_command = [
     ]
 
 for loop in range(99,98,97):
-    loop_commands = ['int loop ' + str(loop), 'description Looper ' + str(loop)]
+    loop_commands = ['int loop ' + str(loop), 'description HPDM ' + str(loop)]
     sshCli.send_config_set(loop_commands)
 
 loopback = sshCli.send_config_set(config_command)
