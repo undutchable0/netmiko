@@ -15,6 +15,8 @@ if password:
 
 tn.write(b"enable\n")
 tn.write(b"conf t\n")
+for loop in range(5,10,1)
+    tn.write(b"vlan (loop)\n")
 tn.write(b"int loo 200\n")
 tn.write(b"description HellYah\n")
 tn.write(b"end\n")
