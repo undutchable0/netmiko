@@ -9,9 +9,9 @@ print ("Configuring Switch " + (HOST))
 tn = telnetlib.Telnet(HOST)
 tn.read_until(b"Username: ")
 tn.write(user.encode('ascii') + b"\n")
- if password:
-  tn.read_until(b"Password: ")
-  tn.write(password.encode('ascii') + b"\n")
+if password:
+ tn.read_until(b"Password: ")
+ tn.write(password.encode('ascii') + b"\n")
 tn.write(b"enable\n")
 tn.write(b"terminal lenth 0\n")
 tn.write(b"show run\n")
