@@ -12,7 +12,7 @@ sshCli = ConnectHandler(
 config_command = [
     'int lo5',
     'ip add 1.1.1.1 255.255.255.0',
-    'descrip Change loop'
+    'descrip HPDM'
     ]
 
 for loop in range(99,98,97):
