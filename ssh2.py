@@ -21,7 +21,7 @@ with open('commands.txt') as f:
     lines = f.read().splitlines()
 print(lines)
 
-with open('hosts.txt') as f:
+with open('catalyst.txt') as f:
     switches = f.read()
 print(switches)
 
