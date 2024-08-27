@@ -2,22 +2,22 @@ from netmiko import ConnectHandler
 import json
 
 SPOKE1 = {
-    device_type = 'cisco_ios',
-    host = 10.99.2.1,
-    port = 22,
-    username = 'cisco',
-    password = 'cisco'
+    'device_type' : 'cisco_ios',
+    'host' : '10.99.2.1',
+    'port' : 22,
+    'username' : 'cisco',
+    'password' : 'cisco'
 }
 
 SPOKE2 = {
-    device_type = 'cisco_ios',
-    host = 10.99.2.102,
-    port = 22,
-    username = 'cisco',
-    password = 'cisco'
+    'device_type' : 'cisco_ios',
+    'host' : '10.99.2.102',
+    'port' : '22',
+    'username' : 'cisco',
+    'password' : 'cisco'
 }
 
-ALL = [SPOKE1, SPOKE2]
+ALL = (SPOKE1)
 
 sshCli = ConnectHandler(ALL)
 
