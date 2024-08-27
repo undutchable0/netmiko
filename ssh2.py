@@ -33,6 +33,7 @@ for loop in range(55,60,1):
 
 loopback = sshCli.send_config_set(config_command)
 
+print(loopback)
 
 
 
