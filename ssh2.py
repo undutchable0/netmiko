@@ -21,14 +21,18 @@ with open('commands.txt') as f:
     lines = f.read().splitlines()
 print(lines)
 
+with open('hosts.txt') as f:
+    switches = f.read().splitlines()
+print(switches)
 
+'''
 for devices in all_devices:
     net_connect = ConnectHandler(**devices)
     for n in range (1,6):
        print ("Creating LOOPBACK " + str(n))
        output = net_connect.send_config_set(lines)
        print (output)
-
+'''
 
 
 
