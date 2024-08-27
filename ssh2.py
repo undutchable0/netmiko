@@ -1,13 +1,25 @@
 from netmiko import ConnectHandler
 import json
 
-sshCli = ConnectHandler(
+SPOKE1 = {
     device_type = 'cisco_ios',
-    host = '10.99.2.1',
+    host = 10.99.2.1,
     port = 22,
     username = 'cisco',
     password = 'cisco'
-)
+}
+
+SPOKE2 = {
+    device_type = 'cisco_ios',
+    host = 10.99.2.102,
+    port = 22,
+    username = 'cisco',
+    password = 'cisco'
+}
+
+ALL = [SPOKE1, SPOKE2]
+
+sshCli = ConnectHandler(ALL)
 
 config_command = [
     'int lo5',
@@ -21,6 +33,6 @@ for loop in range(55,60,1):
 
 loopback = sshCli.send_config_set(config_command)
 
-print(loopback)
+
 
 
