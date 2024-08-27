@@ -22,7 +22,7 @@ with open('commands.txt') as f:
 print(lines)
 
 with open('hosts.txt') as f:
-    switches = f.read().splitlines()
+    switches = f.read()
 print(switches)
 
 '''
