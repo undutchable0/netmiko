@@ -19,7 +19,7 @@ SPOKE2 = {
 
 ALL = (SPOKE1)
 
-sshCli = ConnectHandler(ALL)
+sshCli = ConnectHandler[ALL]
 
 config_command = [
     'int lo5',
