@@ -9,7 +9,7 @@ SPOKE1 = {
 
 SPOKE2 = {
     'device_type': 'cisco_ios',
-    'ip': '10.99.2.102',
+    'ip': '10.99.0.102',
     'username': 'cisco',
     'password': 'cisco'
 }
