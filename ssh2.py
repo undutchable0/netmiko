@@ -24,6 +24,7 @@ print(lines)
 with open('catalyst.txt') as f:
     switches = f.read()
 print(switches)
+print(type(switches))
 
 '''
 for devices in all_devices:
