@@ -17,6 +17,11 @@ SPOKE2 = {
 
 all_devices = [SPOKE1, SPOKE2]
 
+with open('commands.txt') as f:
+    lines = f.read().splitlines()
+print(lines)
+
+'''
 for devices in all_devices:
     net_connect = ConnectHandler(**devices)
     for n in range (1,6):
@@ -24,6 +29,6 @@ for devices in all_devices:
        config_commands = ['int loo' + str(n), 'description Loopback ' + str(n)]
        output = net_connect.send_config_set(config_commands)
        print (output)
-
+'''
 
 
