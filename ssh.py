@@ -28,7 +28,10 @@ print(json.dumps(output, indent=2))
 
 
 for interfaces in output:
+    print('####################')
+    print(interfaces['hostname'])
     print("Version:", interfaces['version'])
     print("Uptime:", interfaces['uptime'])
+    print('####################')
 
 
