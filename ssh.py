@@ -28,6 +28,6 @@ print(json.dumps(output, indent=2))
 
 
 for interfaces in output:
-    print(interfaces['interface'] , ' is ' , interfaces['status'])
+    print("Version is ", interfaces['version'])
 
 
