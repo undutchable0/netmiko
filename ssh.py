@@ -24,6 +24,7 @@ loopback = sshCli.send_config_set(config_command)
 
 output = sshCli.send_command('show version', use_textfsm=True)
 
+print(type(output))
 print(json.dumps(output, indent=2))
 
 
