@@ -28,6 +28,7 @@ print(json.dumps(output, indent=2))
 
 
 for interfaces in output:
-    print("Version is ", interfaces['version'])
+    print("Version:", interfaces['version'])
+    print("Uptime:", interfaces['uptime])
 
 
