@@ -24,7 +24,13 @@ for host in devices:
     show = 'show version'
     show_output = net_connect.send_command(show, use_textfsm=True)
     print('#########################')
-    print(interfaces['hostname'])
+    for interfaces in output:
+        print('####################')
+        print(interfaces['hostname'])
+        print("Version:", interfaces['version'])
+        print("Uptime:", interfaces['uptime'])
+        print("Model(s):", interfaces['hardware'])
+        print('####################')
     net_connect.disconnect()
 
 '''
