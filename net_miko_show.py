@@ -24,7 +24,7 @@ for host in devices:
     show = 'show version'
     show_output = net_connect.send_command(show, use_textfsm=True)
     print('#########################')
-    print(show_output)
+    print(json.dumps(show_output, indent=2))
     net_connect.disconnect()
 
 '''
