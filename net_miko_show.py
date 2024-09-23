@@ -10,7 +10,7 @@ host1 = {
 }
 
 host2 = {
-    "host": "10.99.2.1",
+    "host": "10.99.0.102",
     "username": "cisco",
     "password": "cisco",
     "device_type": "cisco_ios",
