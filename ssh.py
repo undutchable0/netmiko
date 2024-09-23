@@ -35,4 +35,4 @@ for interfaces in output:
     print("Uptime:", interfaces['uptime'])
     print('####################')
 
-
+test
