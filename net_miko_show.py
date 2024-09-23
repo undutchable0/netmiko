@@ -24,7 +24,7 @@ for host in devices:
     show = 'show version'
     show_output = net_connect.send_command(show)
     print(show_output)
-    net_connection.disconnect()
+    net_connect.disconnect()
 
 '''
 output = router1.send_command('show version', use_textfsm=True)
