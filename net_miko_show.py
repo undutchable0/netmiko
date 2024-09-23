@@ -22,7 +22,7 @@ devices = [host1, host2]
 for host in devices:
     net_connect = Netmiko(**host)
     show = 'show version'
-    show_output = net_connect.send_command(show)
+    show_output = net_connect.send_command(show, use_textfsm=True)
     print('#########################')
     print(show_output)
     net_connect.disconnect()
