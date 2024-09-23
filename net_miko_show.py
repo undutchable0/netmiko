@@ -23,6 +23,7 @@ for host in devices:
     net_connect = Netmiko(**host)
     show = 'show version'
     show_output = net_connect.send_command(show)
+    print('#########################')
     print(show_output)
     net_connect.disconnect()
 
