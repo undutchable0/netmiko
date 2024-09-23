@@ -24,7 +24,7 @@ for host in devices:
     show = 'show version'
     show_output = net_connect.send_command(show, use_textfsm=True)
     print('#########################')
-    for interfaces in output:
+    for interfaces in show_output:
         print('####################')
         print(interfaces['hostname'])
         print("Version:", interfaces['version'])
