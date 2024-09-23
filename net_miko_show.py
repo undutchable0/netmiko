@@ -24,7 +24,6 @@ for host in devices:
     show = 'show version'
     show_output = net_connect.send_command(show, use_textfsm=True)
     for values in show_output:
-        print('####################')
         print(values['hostname'])
         print("Version:", values['version'])
         print("Uptime:", values['uptime'])
