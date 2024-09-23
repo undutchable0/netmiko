@@ -9,13 +9,6 @@ sshCli = ConnectHandler(
     password = 'cisco'
 )
 
-router2 = ConnectHandler(
-    device_type = 'cisco_ios',
-    host = '192.1',
-    port = 22,
-    username = 'admin',
-    password = '**'
-)
 
 output = sshCli.send_command('show version', use_textfsm=True)
 
