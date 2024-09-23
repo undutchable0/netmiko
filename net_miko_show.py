@@ -1,27 +1,37 @@
-from netmiko import ConnectHandler
+from netmiko import Netmiko
 import json
 
-router1 = {
-    'device_type' = 'cisco_ios',
-    'host' = '10.99.2.1',
-    'port' = 22,
-    'username' = 'cisco',
-    'password' = 'cisco'
+host1 = {
+    "host": "10.99.2.1",
+    "username": "cisco",
+    "password": "cisco",
+    "device_type": "cisco_ios",
+    "global_delay_factor": 0.1
 }
 
-'''
-router2 = ConnectHandler(
-    device_type = 'cisco_ios',
-    host = '10.99.2.1',
-    port = 22,
-    username = 'cisco',
-    password = 'cisco'
-)
-'''
+host2 = {
+    "host": "10.99.2.1",
+    "username": "cisco",
+    "password": "cisco",
+    "device_type": "cisco_ios",
+    "global_delay_factor": 0.1
+}
 
+devices = [host1, host2]
+
+for host in devices:
+    net_connect = Netmiko(**host)
+    show = 'show version'
+    show_output = net_connect.send_command(show)
+    print(show_output)
+    net_connection.disconnect()
+
+'''
 output = router1.send_command('show version', use_textfsm=True)
 
 print(json.dumps(output, indent=2))
+
+
 
 for interfaces in output:
     print('####################')
@@ -30,3 +40,4 @@ for interfaces in output:
     print("Uptime:", interfaces['uptime'])
     print("Model(s):", interfaces['hardware'])
     print('####################')
+'''
