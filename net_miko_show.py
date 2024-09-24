@@ -30,6 +30,8 @@ for host in devices:
         print("Model(s):", values['hardware'])
         print('####################')
     net_connect.disconnect()
+else:
+    print('cannot connect to device')
 
 '''
 output = router1.send_command('show version', use_textfsm=True)
