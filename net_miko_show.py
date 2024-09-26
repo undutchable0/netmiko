@@ -29,13 +29,17 @@ for host in devices:
         print("Uptime:", values['uptime'])
         print("Model(s):", values['hardware'])
         print('####################')
+        show_output_str = str(show_output)
+        save_show = open('show_command.txt', 'w')
+        save_show.write(show_output_str)
+        save_show.close()
     net_connect.disconnect()
-
+'''
 show_output_str = str(show_output)
 save_show = open('show_command.txt', 'w')
 save_show.write(show_output_str)
 save_show.close()
-
+'''
 
     
 '''
