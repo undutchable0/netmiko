@@ -30,11 +30,16 @@ for host in devices:
         print("Model(s):", values['hardware'])
         print('####################')
     net_connect.disconnect()
+
+show_output_str = str(show_output)
+save_show = open('show_command.txt', 'w')
+save_show.write(show_output_str)
+save_show.close()
+
+
     
 '''
-output = router1.send_command('show version', use_textfsm=True)
-
-print(json.dumps(output, indent=2))
+print(json.dumps(show_output, indent=2))
 
 
 
