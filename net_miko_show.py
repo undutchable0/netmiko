@@ -24,15 +24,13 @@ for host in devices:
     show = 'show version'
     show_output = net_connect.send_command(show, use_textfsm=True)
     for values in show_output:
-        print(values['hostname'])
-        print("Version:", values['version'])
-        print("Uptime:", values['uptime'])
-        print("Model(s):", values['hardware'])
-        print('####################')
-        show_output_str = str(show_output)
-        save_show = open('show_command.txt', 'w')
-        save_show.write(show_output_str)
-        save_show.close()
+        with open('show_command.txt', 'w') as f:
+            print(values['hostname'], file=f)
+            print("Version:", values['version'], file=f)
+            print("Uptime:", values['uptime'], file=f)
+            print("Model(s):", values['hardware'], file=f)
+            print('####################', file=f)
+
     net_connect.disconnect()
 '''
 show_output_str = str(show_output)
